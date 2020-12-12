@@ -7,14 +7,22 @@ nav {
   align-items: center;
 
 
-  .menu {
 
+
+  .menu {
     list-style-type: none;
     display: flex;
     padding: 0;
     margin: 0;
 
-  }
+    &.active{
+
+      display: block;
+
+    }
+
+
+     }
 
 
   .menu__element {
@@ -22,10 +30,18 @@ nav {
     margin-right: 35px;
     text-transform: uppercase;
 
+    &:last-child {
+      margin-right: 0;
+    }
+
+
+
+
   }
 
   .menu__link {
 
+    font-family: "Raleway";
     text-decoration: none;
     color: $menuElementColor;
     transition: color;
@@ -35,11 +51,9 @@ nav {
     &:hover {
       color: $white;
 
-
       &:before {
         opacity: 1;
       }
-
 
       &:after {
         opacity: 1;
@@ -81,5 +95,51 @@ nav {
     }
 
   }
+
+
+
+}
+
+
+
+.menu__burger {
+  width: 25px;
+  height: 30px;
+  display: none;
+  position: relative;
+  cursor: pointer;
+top: 0;
+  &:before {
+    content: "";
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+  }
+
+  &:after {
+    content: "";
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+
+  }
+
+
+  .menu__burgerSpan {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+
+
 
 }
