@@ -1,0 +1,9 @@
+.idea
+build/
+
+gulp
+node_modules
+img
+gulpfile.js
+package.json
+package-lock.json

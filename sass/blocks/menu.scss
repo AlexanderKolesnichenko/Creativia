@@ -1,0 +1,85 @@
+$menuElementColor: #a4a4a4;
+
+nav {
+
+  height: 67px;
+  display: flex;
+  align-items: center;
+
+
+  .menu {
+
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+  }
+
+
+  .menu__element {
+
+    margin-right: 35px;
+    text-transform: uppercase;
+
+  }
+
+  .menu__link {
+
+    text-decoration: none;
+    color: $menuElementColor;
+    transition: color;
+    transition-duration: 500ms;
+    position: relative;
+
+    &:hover {
+      color: $white;
+
+
+      &:before {
+        opacity: 1;
+      }
+
+
+      &:after {
+        opacity: 1;
+      }
+    }
+
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 27px;
+      height: 3px;
+      background-color: $pink;
+      left: 0;
+      right: 0;
+      top: -27px;
+      margin: auto;
+      opacity: 0;
+      transition: opacity;
+      transition-duration: 500ms;
+      pointer-events: none;
+    }
+
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 27px;
+      height: 3px;
+      background-color: $pink;
+      left: 0;
+      right: 0;
+      bottom: -24px;
+      margin: auto;
+      opacity: 0;
+      transition: opacity;
+      transition-duration: 500ms;
+      pointer-events: none;
+    }
+
+  }
+
+}

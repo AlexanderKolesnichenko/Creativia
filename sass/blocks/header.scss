@@ -1,0 +1,26 @@
+$headerBorderColor: #282828;
+$headerTopColor: #07070c;
+
+
+.header {
+  background-color: $headerTopColor;
+  border-top: 3px solid $headerBorderColor;
+  height: 67px;
+
+
+  .header__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .header__logo {
+    position: relative;
+    top: -3px;
+  }
+
+
+
+
+
+}
