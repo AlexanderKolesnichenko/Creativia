@@ -1,8 +1,3 @@
 .idea
 build/
 
-gulp
-node_modules
-gulpfile.js
-package.json
-package-lock.json
