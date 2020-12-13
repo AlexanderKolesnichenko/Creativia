@@ -1,12 +1,27 @@
 $menuElementColor: #a4a4a4;
 
-nav {
+.header__navigate {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
 
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+}
+
+
+nav {
   height: 67px;
   display: flex;
   align-items: center;
-
-
+  @media (max-width: 768px) {
+    height: auto;
+    margin-top: 50px;
+    width: 100%;
+  }
 
 
   .menu {
@@ -15,14 +30,18 @@ nav {
     padding: 0;
     margin: 0;
 
-    &.active{
-
+    &.active {
       display: block;
+    }
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      width: 100%;
+      display: none;
     }
 
 
-     }
+  }
 
 
   .menu__element {
@@ -34,7 +53,13 @@ nav {
       margin-right: 0;
     }
 
+    @media (max-width: 1090px) {
+      margin-right: 20px;
+    }
 
+    @media (max-width: 768px) {
+      margin: 15px 0;
+    }
 
 
   }
@@ -50,9 +75,12 @@ nav {
 
     &:hover {
       color: $white;
-
+      transition: color;
+      transition-duration: 500ms;
       &:before {
         opacity: 1;
+        transition: opacity;
+        transition-duration: 500ms;
       }
 
       &:after {
@@ -75,6 +103,9 @@ nav {
       transition: opacity;
       transition-duration: 500ms;
       pointer-events: none;
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
 
 
@@ -92,14 +123,22 @@ nav {
       transition: opacity;
       transition-duration: 500ms;
       pointer-events: none;
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
+
+
+    @media (max-width: 768px) {
+      width: 100%;
+      display: block;
+    }
+
 
   }
 
 
-
 }
-
 
 
 .menu__burger {
@@ -108,7 +147,7 @@ nav {
   display: none;
   position: relative;
   cursor: pointer;
-top: 0;
+
   &:before {
     content: "";
     width: 25px;
@@ -139,7 +178,10 @@ top: 0;
     margin: auto;
   }
 
-
+  @media (max-width: 768px) {
+    display: block;
+    float: right;
+  }
 
 
 }
