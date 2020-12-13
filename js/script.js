@@ -18,5 +18,44 @@ document.addEventListener('DOMContentLoaded', function () { // запуск фу
 
 
 
+    //слайдер//
+
+    $('.slider .owl-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        margin: 0,
+        nav: true,
+        dots: false,
+        navText: [],
+        responsive: {
+            0: {
+                items: 1,
+                dots: true,
+                nav: false
+            },
+            485: {
+                items: 1
+            }
+        }
+    })
+
+//слайдер//
+
+
+
+//стрелки слайдера//
+
+    $('.owl-prev').append(' <svg class="slider-arrow">\n' +
+        '                    <use xlink:href="img/symbol/sprite.svg#left-arrow"></use>\n' +
+        '                </svg>');
+
+
+    $('.owl-next').append(' <svg class="slider-arrow">\n' +
+        '                    <use xlink:href="img/symbol/sprite.svg#right-arrow"></use>\n' +
+        '                </svg>');
+
+//стрелки слайдера//
+
+
 }, false);
 
