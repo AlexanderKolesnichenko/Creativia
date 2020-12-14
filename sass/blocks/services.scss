@@ -1,0 +1,118 @@
+.services {
+
+  margin-top: 100px;
+
+
+  .services_wrap {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+    grid-column-gap: 30px;
+
+  }
+
+  .services__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+
+    &:hover {
+      .services__icon {
+
+        &_hexagon {
+          fill: $pink;
+          stroke: $pink;
+        }
+
+        &_heart, &_check, &_tablet, &_fire {
+          fill: $white;
+        }
+
+
+      }
+
+    }
+
+  }
+
+
+  .services__iconBlock {
+
+    width: 88px;
+    height: 77px;
+
+    position: relative;
+  }
+
+
+  .services__icon {
+
+    transition: all;
+    transition-duration: 500ms;
+
+    &_hexagon {
+      width: 88px;
+      height: 77px;
+      fill: $white;
+      stroke: black;
+
+    }
+
+
+    &_heart {
+      @include icon-style();
+      width: 24px;
+      height: 21px;
+    }
+
+
+    &_check {
+      @include icon-style();
+      width: 24px;
+      height: 24px;
+    }
+
+    &_tablet {
+      @include icon-style();
+      width: 26px;
+      height: 31px;
+    }
+
+    &_fire {
+      @include icon-style();
+      width: 26px;
+      height: 29px;
+    }
+
+
+  }
+
+
+  .services__name {
+
+    font-size: 20px;
+    font-family: "Raleway";
+    color: $gray;
+    text-transform: uppercase;
+    margin: 35px 0 30px 0;
+
+  }
+
+
+  .services__description {
+
+
+    font-size: 16px;
+
+    color: $textColor;
+    line-height: 1.375;
+    text-align: center;
+margin-bottom: 50px;
+
+  }
+
+
+}

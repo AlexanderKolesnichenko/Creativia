@@ -1,0 +1,38 @@
+.about {
+padding-bottom: 50px;
+  .about__title {
+    @include title-style();
+  }
+
+
+  .about__description {
+    @include description-style();
+  }
+
+
+  .about__wrap {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+
+  }
+
+  .about__toggles {
+
+    flex-basis: 49%;
+
+
+  }
+
+  .about__blockImages {
+
+    flex-basis: 49%;
+
+  }
+
+}

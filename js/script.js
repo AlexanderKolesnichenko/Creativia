@@ -57,5 +57,31 @@ document.addEventListener('DOMContentLoaded', function () { // запуск фу
 //стрелки слайдера//
 
 
+    //toggles//
+
+
+
+    $('.toggles__block').find(".toggles__topBlock").on('click', function () {
+        if ($(this).closest('.toggles__block').hasClass('active')) {
+            $(this).closest('.toggles__block').removeClass('active');
+            $(this).closest('.toggles__block').find(".toggles__name").css('color', '#262626');
+            $(this).closest('.toggles__block').find(".toggles__textBlock").toggle('100');
+            $(this).closest('.toggles__block').find(".toggles__icon_more").css('display', 'block');
+            $(this).closest('.toggles__block').find(".toggles__icon_less").css('display', 'none');
+        } else {
+            $(this).closest('.toggles__block').addClass('active');
+            $(this).closest('.toggles__block').find(".toggles__textBlock").toggle('100');
+            $(this).closest('.toggles__block').find(".toggles__name").css('color', '#ff0036');
+            $(this).closest('.toggles__block').find(".toggles__icon_less").css('display', 'block');
+            $(this).closest('.toggles__block').find(".toggles__icon_more").css('display', 'none');
+
+        }
+    });
+
+
+
+    //toggles//
+
+
 }, false);
 
