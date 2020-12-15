@@ -1,23 +1,59 @@
 .services {
-
+padding-top: 100px;
   margin-top: 100px;
+  position: relative;
+
+  &:before {
+
+    width: 21px;
+    height: 19px;
+    content: url("../img/hexagon-decoration.svg");
+    position: absolute;
+    top: -9px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+  }
+
+  &:after{
+    width: 44%;
+    height: 1px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: $gray;
+  }
 
 
   .services_wrap {
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
-    grid-column-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
+    @media (max-width: 480px) {
+      justify-content: center;
+    }
   }
 
   .services__block {
+    flex-basis: 23%;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
 
+    @media (max-width: 768px) {
+      flex-basis: 45%;
+    }
 
+    @media (max-width: 480px) {
+      flex-basis: 90%;
+    }
 
     &:hover {
       .services__icon {
@@ -25,10 +61,12 @@
         &_hexagon {
           fill: $pink;
           stroke: $pink;
+          transform: rotate(180deg);
         }
 
         &_heart, &_check, &_tablet, &_fire {
           fill: $white;
+
         }
 
 
@@ -110,7 +148,7 @@
     color: $textColor;
     line-height: 1.375;
     text-align: center;
-margin-bottom: 50px;
+    margin-bottom: 50px;
 
   }
 
