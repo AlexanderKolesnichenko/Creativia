@@ -21,7 +21,49 @@ $togglesTextColor: #505050;
 .toggles__block {
   width: 100%;
   margin-bottom: 10px;
+  transition: height;
+  transition-duration: 500ms;
+
+  .toggles__icon {
+    &_less {
+      display: none;
+    }
+  }
+
+  .toggles__name {
+    color: $togglesNameColor;
+  }
+
+  .toggles__textBlock {
+    display: none;
+  }
+
 }
+
+.toggles__block.active {
+  width: 100%;
+  margin-bottom: 10px;
+  transition: height;
+  transition-duration: 500ms;
+
+  .toggles__icon {
+    &_less {
+      display: block;
+    }
+
+    &_more {
+      display: none;
+    }
+  }
+
+  .toggles__name {
+    color: $pink;
+  }
+
+
+
+}
+
 
 .toggles__topBlock {
   display: flex;
@@ -29,16 +71,18 @@ $togglesTextColor: #505050;
   background-color: $togglesGray;
   border: 1px solid $togglesBorderColor;
   cursor: pointer;
+transition: all;
+  transition-duration: 500ms;
 
-
-
+  &:hover{
+    box-shadow: 0 0 15px -1px rgba(0, 0, 0, 0.15);
+  }
 
 
 }
 
 
 .toggles__iconsBLock {
-
   border-right: 1px solid $togglesBorderColor;
   width: 60px;
   height: 45px;
@@ -60,25 +104,19 @@ $togglesTextColor: #505050;
 
   &_less {
     fill: $iconsColorPink;
-    display: none;
   }
-
 
 }
 
 
 .toggles__nameBlock {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-
 }
 
 
 .toggles__name {
-
   font-size: 20px;
   font-family: "Raleway";
   color: $togglesNameColor;
@@ -88,12 +126,11 @@ $togglesTextColor: #505050;
 
 
 .toggles__textBlock {
-
   border-right: 1px solid $togglesBorderColor;
   border-bottom: 1px solid $togglesBorderColor;
   border-left: 1px solid $togglesBorderColor;
-  padding: 15px;
-  display: none;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 
@@ -102,4 +139,5 @@ $togglesTextColor: #505050;
   color: $togglesTextColor;
   line-height: 1.571;
   text-align: left;
+  padding: 15px;
 }
