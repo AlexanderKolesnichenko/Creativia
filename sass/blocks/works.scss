@@ -1,0 +1,165 @@
+$worksOrange: #f39843;
+$worksBlue: #3782aa;
+$worksPink: #ee5d88;
+$worksWhite: #f6f0e0;
+$worksGreen: #56cc82;
+$worksGray: #95a5a5;
+$worksBlue2: #24b0c9;
+$worksOrange2: #fa8562;
+
+.works {
+
+
+  .works__column {
+
+    &_top {
+      display: grid;
+      grid-template-columns: 28% 22% 28% 22%;
+      grid-template-rows: 350px;
+
+      @media (max-width: 992px) {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 350px 350px;
+      }
+      @media (max-width: 480px) {
+        grid-template-columns: 100%;
+        grid-template-rows: 350px 350px 350px 350px;
+      }
+
+
+
+    }
+
+    &_bottom {
+      display: grid;
+      grid-template-columns: 22% 28% 22% 28%;
+      grid-template-rows: 350px;
+      @media (max-width: 992px) {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 350px 350px;
+      }
+      @media (max-width: 480px) {
+        grid-template-columns: 100%;
+        grid-template-rows: 350px 350px 350px 350px;
+      }
+    }
+
+  }
+
+
+  .works__block {
+
+    position: relative;
+
+    &_one {
+
+      background: url("../img/money.svg") center center no-repeat;
+      background-size: 150px;
+      background-color: $worksOrange;
+    }
+
+    &_two {
+
+      background: url("../img/bank.svg") center center no-repeat;
+      background-size: 150px;
+      background-color: $worksBlue;
+    }
+
+    &_three {
+      background: url("../img/growth.svg") center center no-repeat;
+      background-size: 150px;
+
+      background-color: $worksPink;
+    }
+
+    &_four {
+
+      background: url("../img/credit-card.svg") center center no-repeat;
+      background-size: 150px;
+      background-color: $worksWhite;
+    }
+
+    &_five {
+      background: url("../img/calculator.svg") center center no-repeat;
+      background-size: 150px;
+      background-color: $worksGreen;
+    }
+
+    &_six {
+      background: url("../img/exchange.svg") center center no-repeat;
+      background-size: 150px;
+      background-color: $worksGray;
+    }
+
+    &_seven {
+      background: url("../img/purse.svg") center center no-repeat;
+      background-size: 150px;
+      background-color: $worksBlue2;
+    }
+
+    &_eight {
+      background: url("../img/list.svg") center center no-repeat;
+      background-size: 150px;
+      background-color: $worksOrange2;
+    }
+
+
+    &:hover {
+
+
+      &:before {
+
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: .9;
+        transition: opacity;
+        transition-duration: 500ms;
+      }
+
+      .works__description {
+        opacity: 1;
+        transition: opacity;
+        transition-duration: 700ms;
+      }
+
+
+    }
+
+
+  }
+
+
+  .works__link {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .works__description {
+
+    text-align: center;
+    opacity: 0;
+    color: $white;
+
+    & span {
+
+      font-weight: 700;
+      font-size: 40px;
+      color: $white;
+
+    }
+
+  }
+
+}
