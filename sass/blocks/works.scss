@@ -10,42 +10,8 @@ $worksOrange2: #fa8562;
 .works {
 
 
-  .works__column {
-
-    &_top {
-      display: grid;
-      grid-template-columns: 28% 22% 28% 22%;
-      grid-template-rows: 350px;
-
-      @media (max-width: 992px) {
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 350px 350px;
-      }
-      @media (max-width: 480px) {
-        grid-template-columns: 100%;
-        grid-template-rows: 350px 350px 350px 350px;
-      }
-
-
-
-    }
-
-    &_bottom {
-      display: grid;
-      grid-template-columns: 22% 28% 22% 28%;
-      grid-template-rows: 350px;
-      @media (max-width: 992px) {
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 350px 350px;
-      }
-      @media (max-width: 480px) {
-        grid-template-columns: 100%;
-        grid-template-rows: 350px 350px 350px 350px;
-      }
-    }
-
-  }
-
+display: flex;
+flex-wrap: wrap;
 
   .works__block {
 
@@ -53,54 +19,47 @@ $worksOrange2: #fa8562;
 
     &_one {
 
-      background: url("../img/money.svg") center center no-repeat;
-      background-size: 150px;
-      background-color: $worksOrange;
+      @include works-blocks-style($worksOrange,"../img/money.svg",28% );
+
     }
 
     &_two {
-
-      background: url("../img/bank.svg") center center no-repeat;
-      background-size: 150px;
-      background-color: $worksBlue;
+      @include works-blocks-style($worksBlue,"../img/bank.svg",22% );
     }
 
     &_three {
-      background: url("../img/growth.svg") center center no-repeat;
-      background-size: 150px;
-
-      background-color: $worksPink;
+      @include works-blocks-style($worksPink,"../img/growth.svg",28% );
     }
 
     &_four {
 
-      background: url("../img/credit-card.svg") center center no-repeat;
-      background-size: 150px;
-      background-color: $worksWhite;
+      @include works-blocks-style($worksWhite,"../img/credit-card.svg",22% );
+
     }
 
     &_five {
-      background: url("../img/calculator.svg") center center no-repeat;
-      background-size: 150px;
-      background-color: $worksGreen;
+
+      @include works-blocks-style($worksGreen,"../img/calculator.svg",22% );
+
     }
 
     &_six {
-      background: url("../img/exchange.svg") center center no-repeat;
-      background-size: 150px;
-      background-color: $worksGray;
+
+      @include works-blocks-style($worksGray,"../img/exchange.svg",28% );
+
     }
 
     &_seven {
-      background: url("../img/purse.svg") center center no-repeat;
-      background-size: 150px;
-      background-color: $worksBlue2;
+
+      @include works-blocks-style($worksBlue2,"../img/purse.svg",22% );
+
+
     }
 
     &_eight {
-      background: url("../img/list.svg") center center no-repeat;
-      background-size: 150px;
-      background-color: $worksOrange2;
+
+      @include works-blocks-style($worksOrange2,"../img/list.svg",28% );
+
     }
 
 
