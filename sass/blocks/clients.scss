@@ -1,0 +1,123 @@
+.clients {
+
+  background: url('../img/clients-fon.jpg') center center no-repeat fixed;
+  background-size: cover;
+  position: relative;
+
+
+  .clients__title {
+    @include title-style();
+    color: $white;
+  }
+
+
+  .clients__description {
+
+    @include description-style();
+    color: $grayText;
+
+  }
+
+
+  .clients__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .clients__people {
+    flex-basis: 48.7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .clients__subtitle {
+      font-size: 20px;
+      font-family: "Raleway";
+      color: $white;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+    }
+
+    .clients__text {
+
+
+      font-size: 16px;
+
+      color: $grayText;
+      line-height: 1.375;
+      text-align: center;
+      margin-bottom: 50px;
+
+
+    }
+
+    .clients__name {
+
+
+      font-size: 16px;
+      font-family: "Raleway";
+      color: $pink;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 17px;
+
+
+    }
+
+  }
+
+  .clients__company {
+
+    flex-basis: 48.7%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .clients__block {
+
+      flex-basis: 47.3%;
+      height: 115px;
+      background-color: $white;
+      box-shadow: 0 0 50px 20px rgba(34, 60, 80, 0.35) inset;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .clients__nameAndLogo{
+
+      display: flex;
+
+    }
+
+    .clients__logo{
+
+      margin-right: 10px;
+
+    }
+
+    .clients__name{
+
+        font-size: 22px;
+
+        color: rgb(41, 38, 38);
+
+    }
+
+
+  }
+
+
+  figure {
+    margin: 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+
+}

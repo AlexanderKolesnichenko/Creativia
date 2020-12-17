@@ -3,6 +3,35 @@ $productsBorderColor: #e7e7e7;
 $productsBtnColor: #393939;
 
 .products {
+position: relative;
+
+  &:before {
+
+    width: 21px;
+    height: 19px;
+    content: url("../img/hexagon-decoration-red.svg");
+    position: absolute;
+    top: -9px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+  }
+
+  &:after{
+    width: 44%;
+    height: 1px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: $pink;
+  }
+
+
+
 
   .products__title {
 
@@ -26,7 +55,7 @@ $productsBtnColor: #393939;
 
     display: flex;
     justify-content: space-between;
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 
     @media (max-width: 648px) {
       flex-direction: column;
@@ -56,8 +85,6 @@ $productsBtnColor: #393939;
       @media (max-width: 1199px) {
         justify-content: flex-start;
       }
-
-
 
 
       .products__element {
@@ -227,9 +254,9 @@ $productsBtnColor: #393939;
     border: 1px solid $productsBorderColor;
     margin-bottom: 20px;
     box-sizing: border-box;
-    
+
     @media (max-width: 1199px) {
-     width: 100%;
+      width: 100%;
     }
 
     &:hover {
@@ -279,7 +306,7 @@ $productsBtnColor: #393939;
 
 
   .products__button {
-@include button-style($productsBtnColor);
+    @include button-style($productsBtnColor);
 
     position: absolute;
     bottom: 70px;
