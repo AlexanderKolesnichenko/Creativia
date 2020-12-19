@@ -1,8 +1,8 @@
+
 .clients {
 
   background: url('../img/clients-fon.jpg') center center no-repeat fixed;
   background-size: cover;
-  position: relative;
 
 
   .clients__title {
@@ -20,90 +20,108 @@
 
 
   .clients__wrap {
-    display: flex;
-    justify-content: space-between;
+    @include clearfix();
   }
 
+  .clients__block_left {
 
-  .clients__people {
-    flex-basis: 48.7%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    width: 48.7%;
+    float: left;
+
+    @media (max-width: 992px) {
+      float: none;
+      width: 90%;
+      margin: 0 auto 50px auto;
+    }
+
 
     .clients__subtitle {
       font-size: 20px;
       font-family: "Raleway";
       color: $white;
       text-transform: uppercase;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
+      text-align: center;
     }
 
     .clients__text {
 
-
-      font-size: 16px;
-
       color: $grayText;
       line-height: 1.375;
       text-align: center;
-      margin-bottom: 50px;
-
+      margin-bottom: 45px;
 
     }
 
     .clients__name {
 
-
-      font-size: 16px;
       font-family: "Raleway";
       color: $pink;
-      font-weight: bold;
+      font-weight: 700;
       text-transform: uppercase;
-      margin-top: 17px;
-
+      margin-top: 15px;
+      margin-bottom: 10px;
 
     }
 
   }
 
-  .clients__company {
 
-    flex-basis: 48.7%;
+  .clients__block_right {
+    width: 48.7%;
+    float: right;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @media (max-width: 992px) {
+      float: none;
+      width: 90%;
+      margin: auto;
+    }
+    @media (max-width: 480px) {
+
+      display: block;
+
+    }
 
     .clients__block {
 
       flex-basis: 47.3%;
       height: 115px;
       background-color: $white;
-      box-shadow: 0 0 50px 20px rgba(34, 60, 80, 0.35) inset;
+      box-shadow: inset 0 0 68px 0 rgba(0, 0, 0, 0.75);
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-bottom: 40px;
+
+
+      @media (max-width: 480px) {
+
+        width: 100%;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+      }
+
     }
 
 
-    .clients__nameAndLogo{
-
+    .clients__nameAndLogo {
       display: flex;
-
     }
 
-    .clients__logo{
-
+    .clients__logo {
       margin-right: 10px;
-
     }
 
-    .clients__name{
-
-        font-size: 22px;
-
-        color: rgb(41, 38, 38);
-
+    .clients__name {
+      font-size: 22px;
+      color: rgb(41, 38, 38);
     }
 
 
@@ -116,6 +134,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+  }
+
+
+  .owl-dots {
+    display: flex;
+    justify-content: center;
+
+
+    .owl-dot {
+      outline: none;
+
+      span {
+        background: #8f9091;
+        width: 8px;
+        height: 8px;
+        display: block;
+        margin: 5px 7px;
+      }
+
+      &.active {
+        span {
+          background: $pink;
+        }
+      }
+    }
+
 
   }
 

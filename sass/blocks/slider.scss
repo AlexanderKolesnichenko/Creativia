@@ -135,18 +135,16 @@ $arrowColor: #a4a4a4;
         border-radius: 30px;
 
       }
-    }
 
-    .owl-dot.active {
-      span {
-        background: transparent;
-        width: 10px;
-        height: 10px;
-        display: block;
-        margin: 5px 7px;
-        border-radius: 30px;
-        border: 2px solid $pink;
+      &.active {
+        span {
+          background: transparent;
+          border: 2px solid $pink;
+        }
+
       }
+
+
     }
 
 

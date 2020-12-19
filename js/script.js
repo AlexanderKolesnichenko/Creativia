@@ -71,6 +71,25 @@ document.addEventListener('DOMContentLoaded', function () { // запуск фу
 
     //toggles//
 
+    //слайдер клиенты//
+
+    $('.carousel ').owlCarousel({
+        loop: true,
+        autoplay: true,
+        margin: 0,
+        nav: false,
+        dots: true,
+        navText: [],
+        responsive: {
+            0: {
+                items: 1,
+            }
+        }
+    })
+
+//слайдер клиенты//
+
+
 
 }, false);
 
