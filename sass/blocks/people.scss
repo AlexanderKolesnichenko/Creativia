@@ -1,0 +1,176 @@
+$peopleBorderColor: #e7e7e7;
+
+
+.people {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    justify-content: space-around;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .people__block {
+    flex-basis: 23%;
+    margin-right: 10px;
+    max-width: 270px;
+    border: 1px solid $peopleBorderColor;
+    transition: border-color;
+    transition-duration: 500ms;
+    margin-top: 30px;
+
+    &:nth-child(4n+4) { //каждый 4-й элемент
+      margin-right: 0;
+    }
+
+    @media (max-width: 768px) {
+      flex-basis: 37%;
+      margin-right: 0;
+    }
+
+
+    &:hover {
+
+      border-color: $gray;
+
+      .people__photo {
+        &:before {
+          transition: all;
+          transition-duration: 500ms;
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: $gray;
+        }
+
+        .people__icon {
+          opacity: 1;
+        }
+      }
+
+      .people__block {
+        border-color: $gray;
+      }
+
+      .people__name {
+        color: $pink;
+      }
+    }
+  }
+
+
+  .people__photo {
+    width: auto;
+    height: auto;
+    position: relative;
+    max-width: 270px;
+    max-height: 240px;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .people__img {
+
+    max-height: 240px;
+  }
+
+
+  .people__blockIcons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    height: 40px;
+
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 155px;
+  }
+
+
+  .people__icons {
+    width: 45px;
+    height: 40px;
+    position: relative;
+  }
+
+
+  .people__icon {
+    opacity: 0;
+    width: 45px;
+    height: 40px;
+    transition: all;
+    transition-duration: 500ms;
+
+    &_hexagon {
+      height: 100%;
+      fill: $white;
+    }
+
+
+    &_facebook {
+      height: 19px;
+      @include icons-style();
+
+    }
+
+    &_twitter {
+      height: 14px;
+      @include icons-style();
+
+    }
+
+    &_google {
+      height: 14px;
+      @include icons-style();
+
+    }
+
+  }
+
+
+  .people__link {
+    &:hover {
+      .people__icon_facebook {
+        height: 22px;
+      }
+
+      .people__icon_google, .people__icon_twitter {
+        height: 17px;
+      }
+    }
+  }
+
+
+  .people__name {
+    margin: 35px 0 25px 0;
+    font-size: 20px;
+    font-family: "Raleway";
+    color: $gray;
+    text-transform: uppercase;
+    text-align: center;
+    transition: color;
+    transition-duration: 500ms;
+  }
+
+  .people__position {
+
+    margin-bottom: 30px;
+    color: $descriptionColor;
+    text-align: center;
+
+  }
+
+}
