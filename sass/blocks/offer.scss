@@ -1,0 +1,128 @@
+$offerPriceColor: #f2f2f2;
+$offerBorderCOlor: #e7e7e7;
+
+.offer {
+  flex-basis: 23%;
+
+  @media (max-width: 868px) {
+    flex-basis: 45%;
+    margin-top: 50px;
+  }
+
+  @media (max-width: 480px) {
+    flex-basis: 100%;
+  }
+
+  &:hover {
+
+    .offer__block_price {
+      background-color: $pink;
+
+      p {
+        color: $white;
+      }
+    }
+
+
+    .offer__block_btn {
+      .offer__btn {
+
+        background-color: $pink;
+
+      }
+    }
+
+
+  }
+
+
+  .offer__block {
+    width: 100%;
+
+    &_title {
+      background-color: $gray;
+
+      .offer__title {
+        font-size: 20px;
+        font-family: "Raleway";
+        color: $white;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 13px;
+      }
+    }
+
+
+    &_price {
+      background-color: $offerPriceColor;
+      transition-property: background-color;
+      transition-duration: 500ms;
+
+      .offer__prise {
+        font-size: 35px;
+        color: $gray;
+        text-align: center;
+        font-weight: 700;
+        padding: 24px;
+
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+
+
+    &_cpu {
+      @include offers-style();
+    }
+
+    &_hard {
+      @include offers-style();
+    }
+
+    &_ram {
+      @include offers-style();
+    }
+
+    &_traffic {
+      @include offers-style();
+    }
+
+    &_connection {
+      @include offers-style();
+    }
+
+    &_ip {
+      @include offers-style();
+    }
+
+    &_btn {
+      @include offers-style();
+
+      .offer__btn {
+        cursor: pointer;
+        border: none;
+        background-color: $gray;
+        font-family: "Raleway";
+        box-shadow: none;
+        appearance: none;
+        color: $white;
+        width: 85%;
+        height: 40px;
+        font-size: 18px;
+        text-transform: uppercase;
+        transition-property: background-color;
+        transition-duration: 500ms;
+        text-align: center;
+
+        &:hover, &:active {
+          background-color: darken($pink, 15%);
+        }
+      }
+
+    }
+
+  }
+
+}
+

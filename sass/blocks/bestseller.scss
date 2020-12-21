@@ -1,0 +1,54 @@
+.bestseller {
+  position: relative;
+
+  &:before {
+
+    width: 21px;
+    height: 19px;
+    content: url("../img/hexagon-decoration-red.svg");
+    position: absolute;
+    top: -9px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+  }
+
+  &:after {
+    width: 44%;
+    height: 1px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: $pink;
+  }
+
+  .bestseller__title {
+    @include title-style();
+  }
+
+  .bestseller__description {
+    @include description-style();
+
+    @media (max-width: 868px) {
+      margin: 0 auto 50px auto;
+    }
+
+
+  }
+
+  .bestseller__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: 868px) {
+      justify-content: space-around;
+    }
+
+  }
+
+}

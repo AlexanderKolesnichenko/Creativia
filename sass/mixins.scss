@@ -138,3 +138,21 @@
   right: 0;
   margin: auto;
 }
+
+
+@mixin offers-style(){
+
+  border-right: 1px solid $offerBorderCOlor;
+  border-bottom: 1px solid $offerBorderCOlor;
+  border-left: 1px solid $offerBorderCOlor;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 15px;
+
+
+  p {
+    color: $gray;
+  }
+
+
+}
