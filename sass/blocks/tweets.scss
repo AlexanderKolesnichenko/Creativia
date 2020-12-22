@@ -1,0 +1,51 @@
+.tweets {
+
+  background-color: $gray;
+  position: relative;
+
+  &:before {
+    content: url("../img/twitter.png");
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+
+
+    @media (max-width: 480px) {
+      content: '';
+    }
+  }
+
+
+  .tweets__title {
+    @include visually-hidden();
+  }
+
+  .tweets__wrap {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+
+  .tweets__icon {
+
+    &_twitter {
+      height: 30px;
+      fill: $pink;
+      margin-bottom: 30px;
+    }
+
+  }
+
+
+  .tweets__text {
+    color: $white;
+    line-height: 1.375;
+    text-align: center;
+    width: 55.5%;
+  }
+
+
+}
