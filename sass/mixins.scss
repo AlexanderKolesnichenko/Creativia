@@ -45,7 +45,7 @@
   transition-property: background-color;
   transition-duration: 500ms;
   text-align: center;
-
+  outline: none;
   &:hover, &:active {
     background-color: darken($bgcolor, 15%);
   }

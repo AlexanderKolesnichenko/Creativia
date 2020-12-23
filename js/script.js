@@ -90,6 +90,52 @@ document.addEventListener('DOMContentLoaded', function () { // запуск фу
 //слайдер клиенты//
 
 
+//обрезка тайтла //
+
+    var str1 = $('.post__title');
+
+    function postTitle() {
+        str1.each((index, elem) => {
+            if ($(elem).text().length > 30)
+                $(elem).text(function (i, text) {
+                        text = text.substring(0, 30);
+                    var lastIndex = text.lastIndexOf(" ");
+                    text = text.substring(0, lastIndex) + '...';
+                    $(this).text(text);
+                });
+        });
+    }
+    if ($(window).width() > 768) {
+        postTitle();
+    }
+    //обрезка тайтла//
+
+
+//обрезка тайтла //
+
+    var str2 = $('.post__text');
+
+    function postText() {
+        str2.each((index, elem) => {
+            if ($(elem).text().length > 210)
+                $(elem).text(function (i, text) {
+                    if ($(window).width() > 992) {
+                        text = text.substring(0, 260);
+                    }
+                    else{
+                        text = text.substring(0, 190);
+                    }
+                    var lastIndex = text.lastIndexOf(" ");
+                    text = text.substring(0, lastIndex) + '...';
+                    $(this).text(text);
+                });
+        });
+    }
+    if ($(window).width() > 768) {
+        postText();
+    }
+    //обрезка тайтла//
+
 
 }, false);
 

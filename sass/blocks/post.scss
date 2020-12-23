@@ -1,0 +1,117 @@
+$postGreenColor: #abe5bf;
+$postBlueColor: #24b0c9;
+
+.post {
+  .post__block {
+
+    width: 82.9%;
+    margin: 50px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 200px;
+
+
+  }
+
+  .post__images {
+    flex-basis: 38.1%;
+    min-height: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+
+    &_one {
+      background-color: $postGreenColor;
+    }
+
+    &_two {
+      background-color: $postBlueColor;
+    }
+  }
+
+
+  .post__img {
+
+    height: 100px;
+
+  }
+
+
+  .post__description {
+    flex-basis: 58.7%;
+    position: relative;
+    @media (max-width: 768px) {
+      flex-basis: 100%;
+
+    }
+  }
+
+  .post__title {
+
+
+    font-size: 20px;
+    font-family: "Raleway";
+    color: $gray;
+    font-weight: 700;
+    line-height: 1.05;
+    text-align: left;
+    max-height: 21px;
+    overflow: hidden;
+
+
+  }
+
+
+  .post__attributes {
+    display: flex;
+    margin-top: 23px;
+  }
+
+  .post__icons {
+    display: flex;
+    margin-right: 23px;
+    align-items: center;
+  }
+
+  .post__icon {
+
+    margin-right: 8px;
+
+  }
+
+  .post__info {
+
+    font-size: 12px;
+    color: $grayText;
+
+  }
+
+
+  .post__text {
+
+    color: $gray;
+    line-height: 1.25;
+    text-align: left;
+    margin-top: 23px;
+    max-height: 60px;
+    overflow: hidden;
+  }
+
+
+  .post__btn {
+
+    @include button-style($pink);
+    margin-top: 17px;
+    position: absolute;
+    height: 40px;
+
+  }
+
+
+}

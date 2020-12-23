@@ -1,0 +1,43 @@
+$blogBtnColor: #f2f2f2;
+
+.blog {
+
+  .blog__title {
+    @include title-style();
+  }
+
+  .blog__description {
+    @include description-style();
+
+  }
+
+  .blog__more {
+
+    border-radius: 50px;
+    border: none;
+    height: 44px;
+    width: 44px;
+    padding: 0;
+    display: block;
+    margin: 40px auto 0 auto;
+    cursor: pointer;
+    appearance: none;
+    box-shadow: none;
+    outline: none;
+    background-color: $blogBtnColor;
+    transition-property: background-color;
+    transition-duration: 500ms;;
+
+    &:hover, &:active {
+      background-color: darken($blogBtnColor, 15%);
+    }
+  }
+
+
+  .blog__arrow {
+
+    margin: 5px 0 0 2px;
+  }
+
+
+}
